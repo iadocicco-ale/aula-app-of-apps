@@ -6,9 +6,11 @@ metadata:
 spec: 
   generators:
     - clusters: 
-        selector:
-          matchLabels:
-            deploy: "true"
+        matchExpressions:
+          - key: deploy
+            operator: In
+            values: 
+              - "true"
   template:
     metadata:
       name: 'web-color-{{name}}'
