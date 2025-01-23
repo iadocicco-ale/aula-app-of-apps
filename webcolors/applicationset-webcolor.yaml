@@ -11,10 +11,7 @@ spec:
           elements:
             - environment: dev
             - environment: prod
-      - clusters: 
-          selector:
-            matchLabels:
-              deploy: "true"
+      - clusters: {}
   template:
     metadata:
       name: 'web-color-{{name}}-{{environment}}'
