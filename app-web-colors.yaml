@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: web-color-cluster01
+  name: web-colors
   namespace: argocd
 spec:
   source:
