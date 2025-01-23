@@ -5,31 +5,18 @@ metadata:
   namespace: argocd
 spec: 
   generators:
-    - list:
-        elements:
-          - cluster: cluster01
-            url: https://k8s1-ruq9nmue.hcp.eastus.azmk8s.io:443
-            region: us
-            namespace: webcolor
-          - cluster: cluster02
-            url: https://k8s2-w0jkwd5x.hcp.eastus.azmk8s.io:443
-            region: br
-            namespace: webcolor
-          - cluster: cluster03
-            url: https://k8s2-w0jkwd5x.hcp.eastus.azmk8s.io:443
-            region: br
-            namespace: webcolor-cluster3
+    - clusters: {}
   template:
     metadata:
-      name: 'web-color-{{region}}-{{cluster}}'
+      name: 'web-color-{{name}}'
     spec:
       source:
         repoURL: https://github.com/fabricioveronez/web-color-deploy
         path: k8s
         targetRevision: HEAD
       destination:
-        namespace: '{{namespace}}'
-        server: '{{url}}'
+        namespace: webcolor
+        server: '{{server}}'
       project: default
       syncPolicy:
         automated: 
