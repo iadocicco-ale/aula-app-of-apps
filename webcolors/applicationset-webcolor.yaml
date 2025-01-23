@@ -15,6 +15,10 @@ spec:
             url: https://k8s2-w0jkwd5x.hcp.eastus.azmk8s.io:443
             region: br
             namespace: webcolor
+          - cluster: cluster03
+            url: https://k8s2-w0jkwd5x.hcp.eastus.azmk8s.io:443
+            region: br
+            namespace: webcolor-cluster3
   template:
     metadata:
       name: 'web-color-{{region}}-{{cluster}}'
