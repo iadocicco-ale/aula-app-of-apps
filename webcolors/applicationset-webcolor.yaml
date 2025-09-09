@@ -24,7 +24,7 @@ spec:
         path: k8s
         targetRevision: HEAD
       destination:
-        namespace: '{{namespace}'
+        namespace: '{{namespace}}'
         server: '{{url}}'
       project: default
       syncPolicy:
