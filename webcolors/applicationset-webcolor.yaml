@@ -5,27 +5,18 @@ metadata:
   namespace: argocd
 spec: 
   generators:
-  - list:
-      elements:
-        - cluster: cluster01
-          url: https://kubernetes.default.svc
-          region: us
-          namespace: webcolor
-        - cluster: cluster02
-          url: https://192.168.1.53:6443
-          region: br
-          namespace: webcolor
+  - clusters: {}
   template:
     metadata:
-      name: 'web-color-{{region}}-{{cluster}}'
+      name: 'web-color-{{name}}'
     spec:
       source:
         repoURL: https://github.com/iadocicco-ale/web-color-deploy
         path: k8s
         targetRevision: HEAD
       destination:
-        namespace: '{{namespace}}'
-        server: '{{url}}'
+        namespace: webcolor
+        server: '{{server}}'
       project: default
       syncPolicy:
         automated: 
