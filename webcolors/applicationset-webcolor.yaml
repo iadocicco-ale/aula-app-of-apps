@@ -15,6 +15,10 @@ spec:
           url: https://192.168.1.53:6443
           region: br
           namespace: webcolor
+        - cluster: cluster03
+          url: https://192.168.1.53:6443
+          region: it
+          namespace: webcolor3
   template:
     metadata:
       name: 'web-color-{{region}}-{{cluster}}'
