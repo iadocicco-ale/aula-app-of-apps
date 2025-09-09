@@ -5,7 +5,7 @@ metadata:
   namespace: argocd
 spec:
   source:
-    repoURL: https://github.com/fabricioveronez/aula-app-of-apps
+    repoURL: https://github.com/iadocicco-ale/aula-app-of-apps
     path: webcolors
     targetRevision: HEAD
   destination:

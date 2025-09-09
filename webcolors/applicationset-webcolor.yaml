@@ -17,7 +17,7 @@ spec:
       name: 'web-color-{{name}}-{{environment}}'
     spec:
       source:
-        repoURL: https://github.com/fabricioveronez/web-color-deploy
+        repoURL: https://github.com/iadocicco-ale/web-color-deploy
         path: k8s/{{environment}}
         targetRevision: HEAD
       destination:
